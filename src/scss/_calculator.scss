@@ -1,0 +1,168 @@
+img.tip_cal_logo {
+    padding-bottom: 2.5rem;
+}
+
+.calculator {
+    height: 44rem;
+    width: 23.4375rem;
+    padding: 1.5rem;
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0 0 18px 2px $veryDarkCyan;
+
+    @include breakpoint-up(medium) {
+        @include flex-display(row, normal, normal);
+        gap: 1.5rem;
+
+        height: auto;
+        width: 100%;
+        max-width: 60rem;
+
+        &__left {
+            width: 50%;
+        }
+
+        &__right {
+            width: 50%;
+        }
+    }
+
+    
+    @include breakpoint-up(large) {
+        padding: 2rem;
+    }
+
+    &__left {
+        margin-bottom: 1.625rem;
+
+        @include breakpoint-up(large) {
+            padding: 0.625rem 1rem;
+        }
+    }
+
+    &__select-tip {
+        @include breakpoint-up(large) {
+            padding: 1rem 0;
+        }
+    }
+
+    &__label {
+        font-size: $font-14;
+        font-weight: $weight-700;
+
+        @include breakpoint-up(large) {
+            font-size: $font-16;
+        }
+    }
+
+    &__input {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+    }
+
+    &__text {
+        width: 100%;
+        padding: 0.3125rem 0.75rem;
+        background-color: $lightGrayishCyan2;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        outline: none;
+
+        font-size: $font-20;
+        font-weight: $weight-700;
+        font-family: $font-family;
+        color: $veryDarkCyan;
+        text-align: right;
+        cursor: pointer;
+
+        &:focus {
+            border: 2px solid $strongCyan;
+        }
+
+        &.error {
+            border: 2px solid rgb(219, 62, 62);
+        }
+
+        @include breakpoint-up(large) {
+            font-size: $font-24;
+        }
+    }
+
+    &__right {
+        @include flex-display(column, space-between, normal);
+
+        color: $lightGrayishCyan2;
+        background-color: $veryDarkCyan;
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+
+        @include breakpoint-up(large) {
+            padding: 3.25rem 2.5rem 2.5rem 2.5rem;
+        }
+    }
+
+    &__amount {
+        @include flex-display(row, space-between, center);
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2rem;
+        }
+
+        .label--one {
+            font-size: $font-14;
+            font-weight: $weight-700;
+
+            @include breakpoint-up(large) {
+                font-size: $font-16;
+            }
+        }
+
+        .label--two {
+            color: $darkGrayishCyan2;
+            font-size: $font-12;
+            font-weight: $weight-700;
+        }
+
+        &--text {
+            width: 60%;
+            font-size: $font-32;
+            font-weight: $weight-700;
+            color: $strongCyan;
+            text-align: right;
+
+            @include breakpoint-up(large) {
+                font-size: $font-42;
+            }
+        }
+
+        &--reset {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.625rem;
+            color: $veryDarkCyan;
+            background-color: $strongCyan;
+            font-size: $font-18;
+            font-weight: $weight-700;
+            font-family: $font-family;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $hoverColor;
+            }
+
+            // @include breakpoint-up(medium) {
+            //     margin-top: 5rem;
+            // }
+        }
+    }
+}
