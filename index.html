@@ -25,7 +25,10 @@
     <img class="tip_cal_logo" src="./images/logo.svg" alt="TIP Calculator Logo" />
     <div class="calculator">
       <div class="calculator__left">
-        <label for="bill" class="calculator__label grey">Bill</label>
+        <div class="calculator__flex-label">
+          <label for="bill" class="calculator__label grey">Bill</label>
+          <span class="calculator__label none">Can't be zero</span>
+        </div>
         <div class="calculator__input">
           <img class="calculator__icon" src="./images/icon-dollar.svg" alt="Icon Dollar"/>
           <input type="text" class="calculator__text bill" name="bill" id="bill" placeholder="0"/>
@@ -58,7 +61,11 @@
             </div>
           </div>
         </div>
-        <label for="people" class="calculator__label grey">Number of People</label>
+        <div class="calculator__flex-label">
+          <label for="people" class="calculator__label grey">Number of People</label>
+          <span class="calculator__label none">Can't be zero</span>
+        </div>
+        
         <div class="calculator__input">
           <img class="calculator__icon" src="./images/icon-person.svg" alt="Icon Person"/>
           <input type="text" class="calculator__text people" name="people" id="people" placeholder="0"/>

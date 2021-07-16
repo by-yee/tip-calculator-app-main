@@ -44,6 +44,14 @@ body {
   padding-right: 3.75rem;
 }
 
+img.tip_cal_logo {
+  padding-bottom: 2.5rem;
+}
+
+.none {
+  display: none;
+}
+
 .grey {
   color: #5e7a7d;
 }
@@ -129,10 +137,6 @@ body {
   opacity: 0.8;
 }
 
-img.tip_cal_logo {
-  padding-bottom: 2.5rem;
-}
-
 .calculator {
   height: 44rem;
   width: 23.4375rem;
@@ -193,9 +197,32 @@ img.tip_cal_logo {
   }
 }
 
+.calculator__flex-label {
+  margin-top: 0.625rem;
+  margin-bottom: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+}
+
 .calculator__label {
   font-size: 0.875rem;
   font-weight: 700;
+}
+
+.calculator__label.error_msg {
+  color: #d48572;
+  text-align: end;
 }
 
 @media (min-width: 64em) {
@@ -214,6 +241,12 @@ img.tip_cal_logo {
   left: 15px;
 }
 
+@media (min-width: 64em) {
+  .calculator__icon {
+    top: 15px;
+  }
+}
+
 .calculator__text {
   width: 100%;
   padding: 0.3125rem 0.75rem;
@@ -225,7 +258,7 @@ img.tip_cal_logo {
   font-weight: 700;
   font-family: "Space Mono", monospace;
   color: #00494d;
-  text-align: right;
+  text-align: end;
   cursor: pointer;
 }
 
@@ -234,7 +267,7 @@ img.tip_cal_logo {
 }
 
 .calculator__text.error {
-  border: 2px solid #db3e3e;
+  border: 2px solid #d48572;
 }
 
 @media (min-width: 64em) {
@@ -314,7 +347,7 @@ img.tip_cal_logo {
   font-size: 2rem;
   font-weight: 700;
   color: #26c0ab;
-  text-align: right;
+  text-align: end;
 }
 
 @media (min-width: 64em) {
@@ -328,19 +361,24 @@ img.tip_cal_logo {
   margin-top: 1rem;
   padding: 0.625rem;
   color: #00494d;
-  background-color: #26c0ab;
+  background-color: #0d686d;
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "Space Mono", monospace;
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
+  cursor: not-allowed;
+}
+
+.calculator__amount--reset.active {
+  background-color: #26c0ab;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-.calculator__amount--reset:hover {
+.calculator__amount--reset.active:hover {
   background-color: #6af1de;
 }
 /*# sourceMappingURL=style.css.map */
