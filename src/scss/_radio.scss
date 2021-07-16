@@ -1,5 +1,5 @@
 .calculator {
-    
+
     &__tip {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -25,7 +25,7 @@
             bottom:0;
         }
     
-        label {
+        & label {
             @include flex-display(row, center, center);
     
             color: $lightGrayishCyan2;
@@ -37,6 +37,10 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
     
             @include breakpoint-up(large) {
                 font-size: $font-24;
@@ -52,9 +56,9 @@
             color: $veryDarkCyan;
             background-color: $strongCyan;
         }
-    
-        & label:hover {
-            opacity: 0.8;
+
+        & input[type="radio"]:focus + label {
+            outline: 4px dotted $strongCyan;
         }
     }
 }

@@ -117,6 +117,10 @@ img.tip_cal_logo {
   transition: 0.2s ease-in-out;
 }
 
+.calculator__radio label:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 64em) {
   .calculator__radio label {
     font-size: 1.5rem;
@@ -133,8 +137,8 @@ img.tip_cal_logo {
   background-color: #26c0ab;
 }
 
-.calculator__radio label:hover {
-  opacity: 0.8;
+.calculator__radio input[type="radio"]:focus + label {
+  outline: 4px dotted #26c0ab;
 }
 
 .calculator {
