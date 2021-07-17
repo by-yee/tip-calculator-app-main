@@ -56,13 +56,16 @@ class App extends Component {
       }
     }
     if(name === "tip_custom") {
-      this.setState ({
-        tip: value,
-        custom: value,
-        activeReset: true
-      }, () => {
-        this.countTip();
-      })
+      const re = /^\d{0,3}(\.\d{0,2})?$/g
+      if(re.test(value)) {
+         this.setState ({
+          tip: value,
+          custom: value,
+          activeReset: true
+        }, () => {
+          this.countTip();
+        })
+      }
     }
     if(name === "tip") {
       this.setState ({
