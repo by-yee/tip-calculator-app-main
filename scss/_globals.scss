@@ -1,0 +1,48 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $font-24;
+    background-color: $lightGrayishCyan;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @include flex-display(column, center, center);
+
+    &--pall {
+        padding-top: 3.375rem;
+        padding-left: 3.75rem;
+        padding-bottom: 3.375rem;
+        padding-right: 3.75rem;
+    }
+}
+
+img.tip_cal_logo {
+    padding-bottom: 2.5rem;
+}
+
+.none {
+    display: none;
+}
+
+.grey {
+    color: $darkGrayishCyan;
+}
+
+.white {
+    color: $white;
+}

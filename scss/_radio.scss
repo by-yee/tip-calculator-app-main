@@ -1,0 +1,64 @@
+.calculator {
+
+    &__tip {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 14px;
+        grid-row-gap: 22px;
+        margin: 0.625rem 0;
+    
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    &__radio {
+        position: relative;
+        padding: 1.25rem;
+        
+        & label, & input {
+            display: block;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+    
+        & label {
+            @include flex-display(row, center, center);
+    
+            color: $lightGrayishCyan2;
+            background-color: $veryDarkCyan;
+            padding: 1.5rem;
+            font-size: $font-20;
+            font-weight: $weight-700;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+    
+            @include breakpoint-up(large) {
+                font-size: $font-24;
+            }
+        }
+    
+        & input[type="radio"] {
+            opacity: 0.011;
+            z-index: 100;
+        }
+    
+        & input[type="radio"]:checked + label {
+            color: $veryDarkCyan;
+            background-color: $strongCyan;
+        }
+
+        & input[type="radio"]:focus + label {
+            outline: 4px dotted $strongCyan;
+        }
+    }
+}
