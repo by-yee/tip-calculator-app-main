@@ -142,7 +142,7 @@ img.tip_cal_logo {
 }
 
 .calculator {
-  height: 44rem;
+  height: 46rem;
   width: 23.4375rem;
   padding: 1.5rem;
   background-color: white;
@@ -195,15 +195,13 @@ img.tip_cal_logo {
   }
 }
 
-@media (min-width: 64em) {
-  .calculator__select-tip {
-    padding: 1rem 0;
-  }
+.calculator__select-tip {
+  padding: 1rem 0;
 }
 
 .calculator__flex-label {
-  margin-top: 0.625rem;
-  margin-bottom: 0.3125rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.3125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

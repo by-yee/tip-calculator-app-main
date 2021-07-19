@@ -1,5 +1,5 @@
 .calculator {
-    height: 44rem;
+    height: 46rem;
     width: 23.4375rem;
     padding: 1.5rem;
     background-color: $white;
@@ -37,14 +37,12 @@
     }
 
     &__select-tip {
-        @include breakpoint-up(large) {
-            padding: 1rem 0;
-        }
+        padding: 1rem 0;
     }
 
     &__flex-label {
-        margin-top: 0.625rem;
-        margin-bottom: 0.3125rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.3125rem;
         @include flex-display(row, space-between, normal);
     }
 
