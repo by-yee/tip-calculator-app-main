@@ -22,7 +22,6 @@ class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
-    this.handleRadio = this.handleRadio.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.countTip = this.countTip.bind(this)
   }
@@ -40,9 +39,7 @@ class App extends Component {
             billError: false,
             bill: value,
             activeReset: true
-          }, () => {
-            this.countTip();
-          })
+          }, () => { this.countTip() })
         }
       }
     }
@@ -56,16 +53,10 @@ class App extends Component {
             peopleError: false,
             people: value,
             activeReset: true
-          }, () => {
-            this.countTip();
-          })
+          }, () => { this.countTip() })
         }
       }
     }
-  }
-
-  handleRadio(event) {
-    const {name, value} = event.target
 
     if(name === "tip_custom") {
       const re = /^\d{0,3}(\.\d{0,2})?$/g
@@ -74,9 +65,7 @@ class App extends Component {
           tip: value,
           custom: value,
           activeReset: true
-        }, () => {
-          this.countTip();
-        })
+        }, () => { this.countTip() })
       }
     }
     if(name === "tip") {
@@ -84,9 +73,7 @@ class App extends Component {
         tip: value,
         custom: "",
         activeReset: true
-      }, () => {
-        this.countTip();
-      })
+      }, () => { this.countTip() })
     }
   }
 
@@ -122,7 +109,7 @@ class App extends Component {
         <div className="calculator">
           <div className="calculator__left">
             <Bill BillError={this.state.billError} Bill={this.state.bill} handleChange={this.handleChange}/>
-            <Tip Tip={this.state.tip} Custom={this.state.custom} handleRadio={this.handleRadio}/>  
+            <Tip Tip={this.state.tip} Custom={this.state.custom} handleChange={this.handleChange}/>  
             <People PeopleError={this.state.peopleError} People={this.state.people} handleChange={this.handleChange}/>
           </div>
           
