@@ -64,7 +64,7 @@ img.tip_cal_logo {
 .calculator__tip {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: 1fr 1fr;
       grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 14px;
   grid-row-gap: 22px;
@@ -73,7 +73,7 @@ img.tip_cal_logo {
 
 @media (min-width: 64em) {
   .calculator__tip {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
   }
 }
